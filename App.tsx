@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, ScrollView } from 'react-native';
 import { styles } from './styles';
+import { bankOptions } from './bank-options';
 
 export default function App() {
   return (
@@ -43,7 +44,7 @@ export default function App() {
               Conta
             </Text>
             <Text style={styles.accountSummaryValueText}>
-              R$ 3,259,75
+              R$ 3.259,75
             </Text>
           </View>
 
@@ -51,6 +52,25 @@ export default function App() {
             source={require('./assets/right-arrow.png')}
           />
         </View>
+
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={{ flexDirection: 'row' }}
+        >
+          <View style={styles.bankOptions}>
+            {bankOptions.map(bankOption => (
+              <View style={styles.optionBox}>
+                <View style={styles.circleBox}>
+                  <Image 
+                    source={bankOption.iconPath}
+                  />
+                </View>
+                <Text style={styles.optionText}>{bankOption.text}</Text>
+              </View>
+            ))}
+          </View>
+        </ScrollView>      
       </View>
     </>
   );

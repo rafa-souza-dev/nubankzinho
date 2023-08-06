@@ -46,4 +46,32 @@ export const styles = StyleSheet.create({
       fontSize: 16,
       fontWeight: '600',
     },
+    bankOptions: {
+      flexDirection: 'row',
+      paddingHorizontal: 16,
+      paddingTop: 24,
+      gap: 16,
+      alignItems: 'center'
+    },
+    optionBox: {
+      alignItems: 'center',
+      width: 75,
+      height: 100,
+      gap: 6
+    },
+    optionText: {
+      fontSize: 14,
+      textAlign: 'center',
+      fontWeight: '500',
+      flexShrink: 0
+    },
+    circleBox: {
+      backgroundColor: "#F0F1F5",
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 56,
+      height: 56,
+      borderRadius: 50,
+      padding: 16
+    },
 });
