@@ -60,7 +60,7 @@ export default function App() {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.bankOptions}>
                 {bankOptions.map(bankOption => (
-                  <View style={styles.optionBox}>
+                  <View key={bankOption.text} style={styles.optionBox}>
                     <View style={styles.circleBox}>
                       <Image 
                         source={bankOption.iconPath}
@@ -117,8 +117,7 @@ export default function App() {
               <View style={styles.mainOptionCardTextBox}>
                 <Text style={{ fontWeight: 'bold' }}>Investimento</Text>
                 <Text>
-                  O jeito Nu de investir: sem asteriscos, linguagem fácil e 
-                  a partir de R$1. Saiba mais.
+                  O jeito Nu de investir: sem asteriscos.
                 </Text>
               </View>
               <Image
@@ -158,7 +157,81 @@ export default function App() {
                 </View>
                 <Text style={styles.boldPurpleText}>Conhecer</Text>
               </TouchableOpacity>
-              
+
+              <Text style={styles.boldBlackText}>
+                Descubra mais
+              </Text>
+
+              <View style={{
+                height: 230,
+              }}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                  <View 
+                  style={{
+                    flexDirection: 'row',
+                    gap: 14
+                  }}
+                  >
+                                      <View style={styles.card}>
+                    <Image
+                      source={require('./assets/card-1.png')}
+                    />
+                    <View
+                      style={{ 
+                        paddingVertical: 10,
+                        paddingLeft: 10
+                      }}
+                    >
+                      <Text style={styles.boldBlackText}>Parcele compras no app</Text>
+                      <Text style={{ marginVertical: 10 }}>Descontos em compras à vista no crédito, controle total sobr...</Text>
+                      <TouchableOpacity
+                        style={{
+                          backgroundColor: '#830BCC',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          paddingHorizontal: 4,
+                          paddingVertical: 6,
+                          borderRadius: 10,
+                          width: 80
+                        }}
+                      >
+                        <Text style={styles.boldWhiteText}>Conhecer</Text>
+                      </TouchableOpacity>
+      
+                    </View>
+                  </View>
+
+                  <View style={styles.card}>
+                    <Image
+                      source={require('./assets/card-1.png')}
+                    />
+                    <View
+                      style={{ 
+                        paddingVertical: 10,
+                        paddingLeft: 10
+                      }}
+                    >
+                      <Text style={styles.boldBlackText}>Parcele compras no app</Text>
+                      <Text style={{ marginVertical: 10 }}>Descontos em compras à vista no crédito, controle total sobr...</Text>
+                      <TouchableOpacity
+                        style={{
+                          backgroundColor: '#830BCC',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          paddingHorizontal: 4,
+                          paddingVertical: 6,
+                          borderRadius: 10,
+                          width: 80
+                        }}
+                      >
+                        <Text style={styles.boldWhiteText}>Conhecer</Text>
+                      </TouchableOpacity>
+      
+                    </View>
+                  </View>
+                  </View>                  
+                </ScrollView>
+              </View>
             </View>
           </View>
         </ScrollView>

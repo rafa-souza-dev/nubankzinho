@@ -154,4 +154,11 @@ export const styles = StyleSheet.create({
      paddingLeft: 20,
      borderRadius: 8
     },
+    card: {
+     height: 220,
+     width: 237,
+     backgroundColor: "#F0F1F5",
+     borderBottomLeftRadius: 8,
+     borderBottomRightRadius: 8,
+    },
 });
