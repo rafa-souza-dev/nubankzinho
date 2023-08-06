@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#FFF'
+      backgroundColor: '#FFF',
+      paddingBottom: 10
     },
     headerContainer: {
       backgroundColor: '#830AD1',
@@ -22,10 +23,19 @@ export const styles = StyleSheet.create({
       justifyContent: 'space-between',
       gap: 20,
     },
-    boldText: {
+    boldWhiteText: {
       fontSize: 14,
       fontWeight: 'bold',
       color: '#FFF'
+    },
+    boldBlackText: {
+      fontSize: 14,
+      fontWeight: 'bold',
+    },
+    boldPurpleText: {
+      fontSize: 14,
+      color: '#7D27B7',
+      fontWeight: 'bold',
     },
     accountContainer: {
       flexDirection: 'row',
@@ -97,7 +107,7 @@ export const styles = StyleSheet.create({
       flexDirection: 'row',
       gap: 20,
       alignItems: 'center',
-      paddingHorizontal: 16
+      paddingHorizontal: 16,
     },
     infoCardButton: {
       width: 250,
@@ -109,5 +119,39 @@ export const styles = StyleSheet.create({
     },
     infoPurpleCardText: {
       color: '#830AD1'
+    },
+    mainOptions: {
+     flexDirection: 'column' 
+    },
+    mainOptionCard: {
+     flexDirection: 'row',
+     justifyContent: 'space-between',
+     height: 112,
+     width: '100%',
+     borderTopColor: "#F0F1F5",
+     borderTopWidth: 2,
+     paddingVertical: 24,
+     paddingRight: 24,
+     paddingLeft: 16
+    },
+    mainOptionCardTextBox: {
+     gap: 10,
+    },
+    insuranceBox: {
+     paddingTop: 24,
+     paddingHorizontal: 16,
+     borderTopColor: "#F0F1F5",
+     borderTopWidth: 2,
+     gap: 16
+    },
+    insuranceButton: {
+     flex: 1,
+     flexDirection: 'row',
+     justifyContent: 'space-between',
+     backgroundColor: "#F0F1F5",
+     paddingVertical: 16,
+     paddingRight: 14,
+     paddingLeft: 20,
+     borderRadius: 8
     },
 });
