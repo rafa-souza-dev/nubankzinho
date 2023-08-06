@@ -74,4 +74,23 @@ export const styles = StyleSheet.create({
       borderRadius: 50,
       padding: 16
     },
+    cardsButton: {
+      marginTop: 24,
+      marginLeft: 16,
+      paddingTop: 14,
+      paddingBottom: 14,
+      paddingLeft: 20,
+      backgroundColor: "#F0F1F5",
+      flexDirection: 'row',
+      width: 315,
+
+      borderRadius: 8,
+
+      alignItems: 'center',
+      gap: 14,
+    },
+    cardsButtonText: {
+      fontWeight: '500',
+      fontSize: 14
+    },
 });

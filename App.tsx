@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Text, View, ScrollView } from 'react-native';
+import { Image, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { bankOptions } from './bank-options';
 
@@ -53,24 +53,34 @@ export default function App() {
           />
         </View>
 
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={{ flexDirection: 'row' }}
-        >
-          <View style={styles.bankOptions}>
-            {bankOptions.map(bankOption => (
-              <View style={styles.optionBox}>
-                <View style={styles.circleBox}>
-                  <Image 
-                    source={bankOption.iconPath}
-                  />
-                </View>
-                <Text style={styles.optionText}>{bankOption.text}</Text>
+          <View
+            style={{ height: 120 }}
+          >
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <View style={styles.bankOptions}>
+                {bankOptions.map(bankOption => (
+                  <View style={styles.optionBox}>
+                    <View style={styles.circleBox}>
+                      <Image 
+                        source={bankOption.iconPath}
+                      />
+                    </View>
+                    <Text style={styles.optionText}>{bankOption.text}</Text>
+                  </View>
+                ))}
               </View>
-            ))}
+            </ScrollView>
           </View>
-        </ScrollView>      
+
+        <TouchableOpacity style={styles.cardsButton}>
+          <Image
+            source={require('./assets/card.png')}
+          />
+
+          <Text style={styles.cardsButtonText}>
+            Meus Cartões
+          </Text>
+        </TouchableOpacity>
       </View>
     </>
   );
