@@ -81,7 +81,26 @@ export default function App() {
             Meus Cartões
           </Text>
         </TouchableOpacity>
-      </View>
+
+        <View
+            style={{ height: 74, marginTop: 24 }}
+          >
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <View style={styles.infoBox}>
+                <TouchableOpacity style={styles.infoCardButton}>
+                  <Text>
+                    Você tem até <Text style={styles.infoPurpleCardText}>R$ 12.500,00</Text> disponíveis para empréstimo.
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.infoCardButton}>
+                  <Text>
+                    Você tem até <Text style={styles.infoPurpleCardText}>R$ 12.500,00</Text> disponíveis para empréstimo.
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </ScrollView>
+          </View>
+        </View>
     </>
   );
 }

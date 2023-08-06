@@ -93,4 +93,21 @@ export const styles = StyleSheet.create({
       fontWeight: '500',
       fontSize: 14
     },
+    infoBox: {
+      flexDirection: 'row',
+      gap: 20,
+      alignItems: 'center',
+      paddingHorizontal: 16
+    },
+    infoCardButton: {
+      width: 250,
+      height: '100%',
+      borderRadius: 8,
+      backgroundColor: "#F0F1F5",
+      paddingVertical: 19,
+      paddingLeft: 18
+    },
+    infoPurpleCardText: {
+      color: '#830AD1'
+    },
 });
